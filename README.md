@@ -22,6 +22,8 @@ Additinaly, the OpenCV library can be enabled with a `WITH_OPENCV_DEBUG` flag.
 * Extract the folder `opencv-3.3` anywhere
 * You probably will have to install multiple dependencies, which are missing. This depends on, e.g Java and Python bindings, use of `gstreamer` etc. Modify the `opencv-3.3/CMakeLists.txt` file accordingly and install the tools. Almost any errors you will encounter are easily searchable, which point to a single `apt-get install` command.
 * Here is one, which covers the basics requirements `sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev`
+* Alternativly, you can try to execute [this prepared script](./install-opencv.sh), but it would be wise to run it line by line to fix the errors you encounter
+
 
 ```bash
 > cd opencv-3.3
