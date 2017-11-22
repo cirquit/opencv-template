@@ -1,17 +1,26 @@
 #include <iostream>
 #include "map.hpp"
 
-// #ifndef OPENCV_DEBUG
+#if OPENCV_DEBUG
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-// #endif // OPENCV_DEBUG
+#endif // OPENCV_DEBUG
+
+
+#define UNUSED(x) (void)(x)
+
 
 int main(int argc, char const *argv[])
 {
+    UNUSED(argc);
+    UNUSED(argv);
+
     std::cout << foo() << '\n';
 
     std::string image_path = "images/indifferent-cat.jpg";
     std::string window_name = "Indifferent cat";
+
+#if OPENCV_DEBUG
 
     cv::Mat image = cv::imread(image_path, CV_LOAD_IMAGE_COLOR);
     
@@ -19,6 +28,8 @@ int main(int argc, char const *argv[])
     cv::imshow(window_name, image); 
     
     cv::waitKey(0);
+
+#endif // OPENCV_DEBUG
 
     return 0;
 }
