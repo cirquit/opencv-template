@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 
 #if OPENCV_DEBUG
 
-    cv::Mat image = cv::imread(image_path, CV_LOAD_IMAGE_COLOR);
+    cv::Mat image = cv::imread(image_path, cv::IMREAD_COLOR);
     
     cv::namedWindow(window_name, cv::WINDOW_AUTOSIZE);
     cv::imshow(window_name, image); 
